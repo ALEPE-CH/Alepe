@@ -11,7 +11,6 @@ ALEPE is a website dedicated to providing information about the Alumni EPE commu
 ## Technologies Used
 - HTML
 - CSS
-- JavaScript
 
 ## Installation
 To run this project locally, follow these steps:
