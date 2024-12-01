@@ -176,7 +176,7 @@ p a:hover, .calendar-button a:hover {
         background-color: transparent;
     }
 
-    main h2, main p {
+    main h2, main p, main h3 {
         margin-left: 5%;
         margin-right: 5%;
         padding: 4px;
@@ -248,7 +248,7 @@ p a:hover, .calendar-button a:hover {
         transition-property: width, left;
     }
 
-    main h2, main p {
+    main h2, main p, main h3 {
         margin-left: 15%;
         margin-right: 15%;
         padding: 5px;
@@ -271,4 +271,19 @@ footer {
 
 main {
     padding-top: 98px;
+}
+
+.impressum {
+    padding: 5px; /* Spacing around the content */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 5px; /* Space above the section */
+}
+
+.impressum h2 {
+    color: var(--main-text); /* Darker color for the heading */
+}
+
+.impressum address {
+    font-style: normal; /* Normal font style for address */
+    line-height: 1.5; /* Improved line spacing */
 }
