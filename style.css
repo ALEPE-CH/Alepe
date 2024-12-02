@@ -1,40 +1,40 @@
 :root {
     /* Main Colors */
-    --main-bg: rgba(255,255,255,1); /* Material dark - modern and reduces eye strain */
-    --main-text: #1F1F1F; /* White text for better contrast */
-    --main-border: rgba(137, 191, 124, 1); /* Subtle purple accent */
+    --main-bg: rgba(255,255,255,1); 
+    --main-text: #1F1F1F; 
+    --main-border: rgba(137, 191, 124, 1);
 
     /* Header Colors */
-    --header-bg: #1F1F1F; /* Slightly lighter than main background */
-    --header-text: rgba(188, 36, 64, 1); /* White text */
-    --header-border: rgba(137, 191, 124, 1); /* Purple accent */
+    --header-bg: #1F1F1F; 
+    --header-text: rgba(188, 36, 64, 1); 
+    --header-border: rgba(137, 191, 124, 1); 
 
     /* Navigation Colors */
-    --nav-bg: #1F1F1F; /* Matches header */
-    --nav-text: rgba(255,255,255,1); /* Slightly dimmed text for inactive links */
-    --nav-hover: rgba(137, 191, 124, 1); /* Purple accent on hover */
-    --nav-border: rgba(137, 191, 124, 1); /* Purple accent for borders */
-    --nav-active: #03DAC6; /* Teal accent for active state */
+    --nav-bg: #1F1F1F;
+    --nav-text: rgba(255,255,255,1); 
+    --nav-hover: rgba(137, 191, 124, 1); 
+    --nav-border: rgba(137, 191, 124, 1); 
+    --nav-active: #03DAC6; 
     --nav-border-yellow: #fbe498;
 
     /* Link Colors */
-    --link-bg: rgba(188, 36, 64, 1); /* Transparent background */
-    --link-text: rgba(255,255,255,1); /* Teal for links */
-    --link-border: rgba(188, 36, 64, 1); /* Teal border */
-    --link-hover-bg: rgb(184, 91, 108); /* Teal background on hover */
-    --link-hover-text: #fbe498; /* Dark text on hover */
+    --link-bg: rgba(188, 36, 64, 1); 
+    --link-text: rgba(255,255,255,1);
+    --link-border: rgba(188, 36, 64, 1); 
+    --link-hover-bg: rgb(184, 91, 108); 
+    --link-hover-text: #fbe498; 
     --link-hover-border: rgb(184, 91, 108);
 
     /* Footer Colors */
-    --footer-bg: #1F1F1F; /* Slightly lighter than main background */
-    --footer-text: rgba(255,255,255,1); /* White text */
-    --footer-border: rgba(137, 191, 124, 1); /* Purple accent */
+    --footer-bg: #1F1F1F;
+    --footer-text: rgba(255,255,255,1); 
+    --footer-border: rgba(137, 191, 124, 1);
 
     /* Hamburger Menu Colors */
-    --hamburger-bg: #fbe498; /* White hamburger icon */
-    --hamburger-menu-bg: #1F1F1F; /* Matches header and footer */
-    --hamburger-menu-text: #FFFFFF; /* White text */
-    --hamburger-menu-border: rgba(137, 191, 124, 1); /* Purple accent */
+    --hamburger-bg: #fbe498; 
+    --hamburger-menu-bg: #1F1F1F; 
+    --hamburger-menu-text: #FFFFFF; 
+    --hamburger-menu-border: rgba(137, 191, 124, 1);
 }
 
 body {
@@ -185,10 +185,6 @@ p a:hover, .calendar-button a:hover {
     .calendar {
         display: none;
     }
-
-    .calendar-button {
-        margin-top: 20px;
-    }
 }
 
 @media (min-width: 1001px) {
@@ -199,12 +195,15 @@ p a:hover, .calendar-button a:hover {
     .calendar {
         align-items: center;
         margin-left: 15%;
-        margin-bottom: 90px;
         width: 70%;
         aspect-ratio: 1 / 0.6;
     }
 
     .calendar-button {
+        display: none;
+    }
+
+    .line-break {
         display: none;
     }
 
@@ -253,10 +252,6 @@ p a:hover, .calendar-button a:hover {
         margin-right: 15%;
         padding: 5px;
     }
-    
-    .calendar-button a {
-        margin-left: 15% + 4px;
-    }
 }
 
 footer {
@@ -271,6 +266,7 @@ footer {
 
 main {
     padding-top: 98px;
+    margin-bottom: 90px;
 }
 
 .impressum {
