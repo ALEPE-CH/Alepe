@@ -1,39 +1,43 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Bem vindo - ALEPE</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALEPE - Início</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Alumni EPE Suíça</h1>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </header>
-    <main>
-        <nav>
-            <div>
-                <a href="index.html">Início</a>
-                <a href="ueber-uns.html">Sobre nós</a>
-                <a href="mitglied-werden.html">Junte-se a nós</a>
-                <a href="coaching.html">Serviços</a>
-                <a href="kalender.html">Agenda</a>
-                <a href="kontakt.html">Contacto</a>
-            </div>
-        </nav>
-        <h2>Bem vindo</h2>
-        <p>
-            Esta página fornece todas as informações necessárias sobre a ALEPE Suíça.
-        </p>
-    </main>
-    <footer>
-        <p>&copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> ALEPE - Alumni EPE Suíça</p>
-    </footer>
-    <script src="script.js"></script>
+<body class="bg-white text-gray-800">
+
+  <!-- En-tête -->
+  <header class="bg-green-700 text-white shadow">
+    <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">ALEPE</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Início</a>
+        <a href="ueber-uns.html" class="hover:underline">Sobre nós</a>
+        <a href="kalender.html" class="hover:underline">Eventos</a>
+        <a href="mitglied-werden.html" class="hover:underline">Tornar-se membro</a>
+        <a href="kontakt.html" class="hover:underline">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section principale -->
+  <main class="container mx-auto px-4 py-16 text-center">
+    <h2 class="text-4xl font-bold mb-6 text-green-700">Bem-vindo à ALEPE</h2>
+    <p class="text-lg mb-6">A associação de antigos alunos da escola portuguesa na Suíça — uma rede jovem, ativa e solidária.</p>
+    <a href="mitglied-werden.html" class="inline-block bg-red-600 text-white px-6 py-3 rounded-lg shadow hover:bg-red-700 transition">Junte-se a nós</a>
+  </main>
+
+  <!-- Ligne décorative -->
+  <div class="h-2 bg-yellow-400 w-full"></div>
+
+  <!-- Pied de page -->
+  <footer class="bg-green-700 text-white mt-12">
+    <div class="container mx-auto px-4 py-6 text-center text-sm">
+      © 2025 ALEPE. Todos os direitos reservados.
+    </div>
+  </footer>
+
 </body>
 </html>
