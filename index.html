@@ -1,39 +1,66 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Bem vindo - ALEPE</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALEPE - Associação</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <h1>Alumni EPE Suíça</h1>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </header>
-    <main>
-        <nav>
-            <div>
-                <a href="index.html">Início</a>
-                <a href="ueber-uns.html">Sobre nós</a>
-                <a href="mitglied-werden.html">Junte-se a nós</a>
-                <a href="coaching.html">Serviços</a>
-                <a href="kalender.html">Agenda</a>
-                <a href="kontakt.html">Contacto</a>
-            </div>
-        </nav>
-        <h2>Bem vindo</h2>
-        <p>
-            Esta página fornece todas as informações necessárias sobre a ALEPE Suíça.
-        </p>
-    </main>
-    <footer>
-        <p>&copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> ALEPE - Alumni EPE Suíça</p>
-    </footer>
-    <script src="script.js"></script>
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+
+  <!-- Barre de navigation fixe -->
+  <header class="bg-green-700 text-white shadow fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">ALEPE</h1>
+      <nav class="space-x-4 text-sm md:text-base">
+        <a href="#accueil" class="hover:underline">Início</a>
+        <a href="#sobre" class="hover:underline">Sobre nós</a>
+        <a href="#eventos" class="hover:underline">Eventos</a>
+        <a href="#contacto" class="hover:underline">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Espacement pour compenser la navbar fixe -->
+  <div class="h-20"></div>
+
+  <!-- Section Accueil -->
+  <section id="accueil" class="py-20 text-center">
+    <h2 class="text-4xl font-bold mb-6 text-green-700">Bem-vindo à ALEPE</h2>
+    <p class="text-lg mb-6">A associação de antigos alunos da escola portuguesa na Suíça — uma rede jovem, ativa e solidária.</p>
+    <a href="#sobre" class="inline-block bg-red-600 text-white px-6 py-3 rounded-lg shadow hover:bg-red-700 transition">Saber mais</a>
+  </section>
+
+  <!-- Section Sobre nós -->
+  <section id="sobre" class="py-20 bg-gray-100 text-center">
+    <h2 class="text-3xl font-bold text-green-700 mb-6">Quem somos</h2>
+    <p class="max-w-3xl mx-auto text-lg">A ALEPE tem como objetivo reunir os antigos alunos da escola portuguesa, promover eventos culturais e reforçar os laços com a comunidade lusófona na Suíça.</p>
+  </section>
+
+  <!-- Section Eventos -->
+  <section id="eventos" class="py-20 text-center">
+    <h2 class="text-3xl font-bold text-green-700 mb-6">Eventos</h2>
+    <p class="max-w-2xl mx-auto text-lg">Em breve: encontros com personalidades, jantares de gala, e eventos para estudantes e ex-alunos.</p>
+  </section>
+
+  <!-- Section Contacto -->
+  <section id="contacto" class="py-20 bg-gray-100 text-center">
+    <h2 class="text-3xl font-bold text-green-700 mb-6">Contacto</h2>
+    <p class="max-w-2xl mx-auto text-lg mb-4">Tem perguntas ou sugestões? Entre em contacto connosco por email: <strong>alepe.ch@gmail.com</strong></p>
+    <a href="mailto:alepe.ch@gmail.com" class="inline-block bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700">Enviar email</a>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="bg-green-700 text-white">
+    <div class="container mx-auto px-4 py-6 text-center text-sm">
+      © 2025 ALEPE. Todos os direitos reservados.
+    </div>
+  </footer>
+
 </body>
 </html>
