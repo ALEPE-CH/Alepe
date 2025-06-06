@@ -1,39 +1,69 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Bem vindo - ALEPE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALEPE</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <h1>Alumni EPE Suíça</h1>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </header>
-    <main>
-        <nav>
-            <div>
-                <a href="index.html">Início</a>
-                <a href="ueber-uns.html">Sobre nós</a>
-                <a href="mitglied-werden.html">Junte-se a nós</a>
-                <a href="coaching.html">Serviços</a>
-                <a href="kalender.html">Agenda</a>
-                <a href="kontakt.html">Contacto</a>
-            </div>
-        </nav>
-        <h2>Bem vindo</h2>
-        <p>
-            Esta página fornece todas as informações necessárias sobre a ALEPE Suíça.
-        </p>
-    </main>
-    <footer>
-        <p>&copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> ALEPE - Alumni EPE Suíça</p>
-    </footer>
-    <script src="script.js"></script>
+<body class="bg-white text-gray-800">
+
+  <!-- Barre de navigation -->
+  <header class="fixed top-0 left-0 w-full bg-green-200 shadow z-50">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Nom de l'association -->
+      <div class="text-xl font-bold text-green-900">
+        ALEPE
+      </div>
+      <!-- Menu de navigation -->
+      <nav class="space-x-6 text-sm md:text-base">
+        <a href="#inicio" class="relative text-green-900 hover:text-green-900 after:content-[''] after:block after:w-0 after:h-1 after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Início</a>
+        <a href="#sobre" class="relative text-green-900 hover:text-green-900 after:content-[''] after:block after:w-0 after:h-1 after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Sobre nós</a>
+        <a href="#servicos" class="relative text-green-900 hover:text-green-900 after:content-[''] after:block after:w-0 after:h-1 after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Serviços</a>
+        <a href="#agenda" class="relative text-green-900 hover:text-green-900 after:content-[''] after:block after:w-0 after:h-1 after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Agenda</a>
+        <a href="#galeria" class="relative text-green-900 hover:text-green-900 after:content-[''] after:block after:w-0 after:h-1 after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Galeria</a>
+        <a href="#contacto" class="relative text-green-900 hover:text-green-900 after:content-[''] after:block after:w-0 after:h-1 after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Marge supérieure pour compenser la barre fixe -->
+  <div class="h-20"></div>
+
+  <!-- Sections (vides pour le moment, on remplira après) -->
+  <section id="inicio" class="h-screen flex items-center justify-center">
+    <h1 class="text-4xl font-bold text-green-700">Bem-vindo à ALEPE</h1>
+  </section>
+
+  <section id="sobre" class="h-screen flex items-center justify-center bg-gray-50">
+    <h2 class="text-3xl font-semibold text-green-700">Sobre nós</h2>
+  </section>
+
+  <section id="servicos" class="h-screen flex items-center justify-center">
+    <h2 class="text-3xl font-semibold text-green-700">Serviços</h2>
+  </section>
+
+  <section id="agenda" class="h-screen flex items-center justify-center bg-gray-50">
+    <h2 class="text-3xl font-semibold text-green-700">Agenda</h2>
+  </section>
+
+  <section id="galeria" class="h-screen flex items-center justify-center">
+    <h2 class="text-3xl font-semibold text-green-700">Galeria</h2>
+  </section>
+
+  <section id="contacto" class="h-screen flex items-center justify-center bg-gray-50">
+    <h2 class="text-3xl font-semibold text-green-700">Contacto</h2>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="bg-green-200 text-center py-4 text-sm text-green-900">
+    © 2025 ALEPE. Todos os direitos reservados.
+  </footer>
+
 </body>
 </html>
