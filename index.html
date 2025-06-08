@@ -23,6 +23,9 @@
             scroll-behavior: smooth;
             background-color: var(--cor-branco);
             color: var(--cor-preto);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         a {
             text-decoration: none;
@@ -42,7 +45,7 @@
             margin: 0 auto;
             display: flex;
             align-items: center;
-            justify-content: space-between; /* espace entre logo et bouton */
+            justify-content: space-between;
             padding: 0.8rem 1.2rem;
         }
         .logo {
@@ -50,10 +53,10 @@
             font-size: 1.8rem;
             color: var(--cor-vermelho);
             user-select: none;
-            flex: 1; /* pour que logo prenne toute la place à gauche */
+            flex: 1;
         }
         nav.main-nav {
-            flex: 2; /* pour que menu soit centré horizontalement */
+            flex: 2;
             display: flex;
             justify-content: center;
         }
@@ -77,7 +80,7 @@
             font-weight: 600;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            flex: 1; /* pour alignement à droite */
+            flex: 1;
             max-width: 150px;
             text-align: center;
         }
@@ -87,19 +90,20 @@
         }
 
         main {
-            padding-top: 100px; /* plus d’espace sous le header */
+            padding-top: 100px;
             max-width: 900px;
             margin: 0 auto;
+            flex-grow: 1;
         }
         section {
-            margin: 100px 0; /* espace entre sections */
+            margin: 100px 0;
             padding: 20px;
             background: none;
             border-radius: 0;
             color: var(--cor-preto);
         }
         section#home {
-            margin-top: 140px; /* plus d’espace en haut de la page */
+            margin-top: 140px;
             text-align: center;
         }
         section#home h1 {
@@ -127,9 +131,19 @@
             margin: 0 auto;
         }
 
+        footer {
+            background-color: var(--cor-verde);
+            color: var(--cor-branco);
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 0.9rem;
+            border-top: 4px solid var(--cor-amarelo);
+            user-select: none;
+        }
+
         @media (max-width: 768px) {
             nav.main-nav {
-                display: none; /* pour l’instant, on désactive le menu mobile */
+                display: none;
             }
             .container-header {
                 padding: 0.8rem 1rem;
@@ -159,4 +173,42 @@
             <a href="#eventos">Eventos</a>
             <a href="#contactos">Contactos</a>
         </nav>
-        <button class="btn-member" ty
+        <button class="btn-member" type="button">Tornar-se membro</button>
+    </div>
+</header>
+
+<main>
+    <section id="home" tabindex="-1" aria-label="Bem-vindo">
+        <h1>Bem-vindo a ALEPE</h1>
+        <p>A comunidade dos antigos alunos da escola portuguesa na Suíça.</p>
+    </section>
+
+    <section id="sobre" tabindex="-1" aria-label="Sobre Nós">
+        <h2>Sobre Nós</h2>
+        <p>
+            A ALEPE é uma associação dedicada a manter e fortalecer os laços entre os antigos alunos da escola portuguesa na Suíça.
+            Organizamos eventos, promovemos o intercâmbio cultural e apoiamos os nossos membros em diversas atividades.
+        </p>
+    </section>
+
+    <section id="eventos" tabindex="-1" aria-label="Eventos">
+        <h2>Eventos</h2>
+        <p>
+            Fique atento aos nossos eventos anuais, reuniões, festas e workshops que celebram a cultura portuguesa e a nossa comunidade.
+        </p>
+    </section>
+
+    <section id="contactos" tabindex="-1" aria-label="Contactos">
+        <h2>Contactos</h2>
+        <p>
+            Para mais informações, contacte-nos por email em <a href="mailto:info@alepe.ch">info@alepe.ch</a> ou siga-nos nas redes sociais.
+        </p>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 ALEPE - Associação dos Antigos Alunos da Escola Portuguesa na Suíça
+</footer>
+
+</body>
+</html>
