@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ALEPE - Associação de Antigos Alunos</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
     <style>
-        /* Couleurs inspirées du drapeau portugais */
         :root {
             --cor-verde: #006600;
             --cor-vermelho: #cc0000;
@@ -16,7 +14,6 @@
             --cor-preto: #1F1F1F;
         }
 
-        /* Reset et base */
         * {
             box-sizing: border-box;
         }
@@ -32,7 +29,6 @@
             color: inherit;
         }
 
-        /* Header */
         header {
             position: fixed;
             top: 0; left: 0; right: 0;
@@ -46,7 +42,7 @@
             margin: 0 auto;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-between; /* espace entre logo et bouton */
             padding: 0.8rem 1.2rem;
         }
         .logo {
@@ -54,6 +50,12 @@
             font-size: 1.8rem;
             color: var(--cor-vermelho);
             user-select: none;
+            flex: 1; /* pour que logo prenne toute la place à gauche */
+        }
+        nav.main-nav {
+            flex: 2; /* pour que menu soit centré horizontalement */
+            display: flex;
+            justify-content: center;
         }
         nav.main-nav a {
             color: var(--cor-preto);
@@ -61,6 +63,7 @@
             font-weight: 600;
             transition: color 0.3s ease;
             text-transform: uppercase;
+            white-space: nowrap;
         }
         nav.main-nav a:hover {
             color: var(--cor-vermelho);
@@ -74,53 +77,42 @@
             font-weight: 600;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            flex: 1; /* pour alignement à droite */
+            max-width: 150px;
+            text-align: center;
         }
         .btn-member:hover {
             background-color: var(--cor-verde);
             color: var(--cor-branco);
         }
 
-        /* Sections */
         main {
-            padding-top: 80px; /* header height */
+            padding-top: 100px; /* plus d’espace sous le header */
+            max-width: 900px;
+            margin: 0 auto;
         }
         section {
-            max-width: 900px;
-            margin: 60px auto;
+            margin: 100px 0; /* espace entre sections */
             padding: 20px;
+            background: none;
+            border-radius: 0;
+            color: var(--cor-preto);
         }
         section#home {
-            background: linear-gradient(135deg, var(--cor-vermelho), var(--cor-verde));
-            color: white;
-            border-radius: 20px;
+            margin-top: 140px; /* plus d’espace en haut de la page */
             text-align: center;
-            padding: 120px 20px;
         }
         section#home h1 {
             font-size: 3rem;
             margin-bottom: 0.5em;
             font-weight: 700;
+            color: var(--cor-vermelho);
         }
         section#home p {
             font-size: 1.4rem;
             margin-bottom: 1.5em;
         }
-        section#home .btn-primary {
-            background-color: var(--cor-amarelo);
-            color: var(--cor-preto);
-            padding: 14px 36px;
-            border: none;
-            border-radius: 30px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            text-transform: uppercase;
-        }
-        section#home .btn-primary:hover {
-            background-color: #dbbe12;
-        }
 
-        /* Titres sections */
         section h2 {
             font-size: 2rem;
             margin-bottom: 1em;
@@ -131,12 +123,13 @@
             font-size: 1.1rem;
             line-height: 1.6;
             color: var(--cor-preto);
+            max-width: 700px;
+            margin: 0 auto;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             nav.main-nav {
-                display: none; /* on pourra ajouter menu hamburger plus tard */
+                display: none; /* pour l’instant, on désactive le menu mobile */
             }
             .container-header {
                 padding: 0.8rem 1rem;
@@ -150,6 +143,7 @@
             .btn-member {
                 padding: 8px 18px;
                 font-size: 0.9rem;
+                max-width: 130px;
             }
         }
     </style>
@@ -165,39 +159,4 @@
             <a href="#eventos">Eventos</a>
             <a href="#contactos">Contactos</a>
         </nav>
-        <button class="btn-member" type="button">Tornar-se membro</button>
-    </div>
-</header>
-
-<main>
-    <section id="home" tabindex="-1" aria-label="Bem-vindo">
-        <h1>Bem-vindo a ALEPE</h1>
-        <p>A comunidade dos antigos alunos da escola portuguesa na Suíça.</p>
-        <button class="btn-primary" type="button" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">Saiba mais</button>
-    </section>
-
-    <section id="sobre" tabindex="-1" aria-label="Sobre Nós">
-        <h2>Sobre Nós</h2>
-        <p>
-            A ALEPE é uma associação dedicada a manter e fortalecer os laços entre os antigos alunos da escola portuguesa na Suíça.
-            Organizamos eventos, promovemos o intercâmbio cultural e apoiamos os nossos membros em diversas atividades.
-        </p>
-    </section>
-
-    <section id="eventos" tabindex="-1" aria-label="Eventos">
-        <h2>Eventos</h2>
-        <p>
-            Fique atento aos nossos eventos anuais, reuniões, festas e workshops que celebram a cultura portuguesa e a nossa comunidade.
-        </p>
-    </section>
-
-    <section id="contactos" tabindex="-1" aria-label="Contactos">
-        <h2>Contactos</h2>
-        <p>
-            Para mais informações, contacte-nos por email em <a href="mailto:info@alepe.ch">info@alepe.ch</a> ou siga-nos nas redes sociais.
-        </p>
-    </section>
-</main>
-
-</body>
-</html>
+        <button class="btn-member" ty
