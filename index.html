@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ALEPE - Alumni Escola Portuguesa na Suíça</title>
+    <style>
+        /* Reset minimal */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- HEADER --- */
+        header {
+            position: sticky;
+            top: 0;
+            background: white;
+            border-bottom: 2px solid #D52B1E; /* rouge vif */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 2rem;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* ALEPE logo/text */
+        .logo {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #D52B1E;
+            user-select: none;
+            cursor: default;
+        }
+
+        /* NAV menu */
+        nav {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #006442;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #D52B1E;
+        }
+
+        /* Bouton "Tornar-se membro" */
+        .btn-membro {
+            background-color: #D52B1E;
+            color: white;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            user-select: none;
+        }
+
+        .btn-membro:hover {
+            background-color: #A01F16;
+        }
+
+        /* --- SECTIONS ONE SCROLL --- */
+        section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            scroll-margin-top: 80px; /* pour offset header sticky */
+        }
+
+        section h2 {
+            color: #D52B1E;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            border-bottom: 3px solid #006442;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #777;
+            border-top: 1px solid #eee;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                display: none; /* Pour simplifier, on cache le menu sur mobile */
+            }
+            .btn-membro {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.9rem;
+            }
+            header {
+                justify-content: space-between;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">ALEPE</div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <button class="btn-membro">Tornar-se membro</button>
+</header>
+
+<main>
+    <section id="inicio">
+        <h2>Início</h2>
+        <p>Bem-vindo ao site da ALEPE - Associação dos Antigos Alunos da Escola Portuguesa na Suíça. Aqui você encontrará todas as informações sobre nossa comunidade e atividades.</p>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre nós</h2>
+        <p>A ALEPE tem como missão conectar antigos alunos da Escola Portuguesa na Suíça e promover eventos culturais e sociais que fortalecem nossos laços.</p>
+    </section>
+
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <p>Oferecemos suporte a nossos membros, organização de eventos, workshops e diversas iniciativas para promover o desenvolvimento pessoal e profissional.</p>
+    </section>
+
+    <section id="agenda">
+        <h2>Agenda</h2>
+        <p>Fique atento às próximas datas dos nossos eventos e reuniões. Participe e conecte-se com a comunidade!</p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Entre em contato conosco pelo e-mail: <a href="mailto:contato@alepe.ch">contato@alepe.ch</a> ou pelo telefone: +41 00 000 00 00.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; <script>document.write(new Date().getFullYear())</script> ALEPE - Associação dos Antigos Alunos da Escola Portuguesa na Suíça</p>
+</footer>
+
+</body>
+</html>
