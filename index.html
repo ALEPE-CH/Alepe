@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ALEPE - Associação de Antigos Alunos</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        /* Couleurs inspirées du drapeau portugais */
+        :root {
+            --cor-verde: #006600;
+            --cor-vermelho: #cc0000;
+            --cor-amarelo: #f7d117;
+            --cor-branco: #ffffff;
+            --cor-preto: #1F1F1F;
+        }
+
+        /* Reset et base */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--cor-branco);
+            color: var(--cor-preto);
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: var(--cor-branco);
+            border-bottom: 3px solid var(--cor-verde);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .container-header {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem 1.2rem;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--cor-vermelho);
+            user-select: none;
+        }
+        nav.main-nav a {
+            color: var(--cor-preto);
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+        }
+        nav.main-nav a:hover {
+            color: var(--cor-vermelho);
+        }
+        .btn-member {
+            background-color: var(--cor-vermelho);
+            color: var(--cor-branco);
+            border: none;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-member:hover {
+            background-color: var(--cor-verde);
+            color: var(--cor-branco);
+        }
+
+        /* Sections */
+        main {
+            padding-top: 80px; /* header height */
+        }
+        section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+        section#home {
+            background: linear-gradient(135deg, var(--cor-vermelho), var(--cor-verde));
+            color: white;
+            border-radius: 20px;
+            text-align: center;
+            padding: 120px 20px;
+        }
+        section#home h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5em;
+            font-weight: 700;
+        }
+        section#home p {
+            font-size: 1.4rem;
+            margin-bottom: 1.5em;
+        }
+        section#home .btn-primary {
+            background-color: var(--cor-amarelo);
+            color: var(--cor-preto);
+            padding: 14px 36px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+        }
+        section#home .btn-primary:hover {
+            background-color: #dbbe12;
+        }
+
+        /* Titres sections */
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1em;
+            color: var(--cor-vermelho);
+            text-align: center;
+        }
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--cor-preto);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav.main-nav {
+                display: none; /* on pourra ajouter menu hamburger plus tard */
+            }
+            .container-header {
+                padding: 0.8rem 1rem;
+            }
+            section#home h1 {
+                font-size: 2.2rem;
+            }
+            section#home p {
+                font-size: 1.1rem;
+            }
+            .btn-member {
+                padding: 8px 18px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container-header">
+        <div class="logo">ALEPE</div>
+        <nav class="main-nav" role="navigation" aria-label="Menu principal">
+            <a href="#home">Início</a>
+            <a href="#sobre">Sobre Nós</a>
+            <a href="#eventos">Eventos</a>
+            <a href="#contactos">Contactos</a>
+        </nav>
+        <button class="btn-member" type="button">Tornar-se membro</button>
+    </div>
+</header>
+
+<main>
+    <section id="home" tabindex="-1" aria-label="Bem-vindo">
+        <h1>Bem-vindo a ALEPE</h1>
+        <p>A comunidade dos antigos alunos da escola portuguesa na Suíça.</p>
+        <button class="btn-primary" type="button" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">Saiba mais</button>
+    </section>
+
+    <section id="sobre" tabindex="-1" aria-label="Sobre Nós">
+        <h2>Sobre Nós</h2>
+        <p>
+            A ALEPE é uma associação dedicada a manter e fortalecer os laços entre os antigos alunos da escola portuguesa na Suíça.
+            Organizamos eventos, promovemos o intercâmbio cultural e apoiamos os nossos membros em diversas atividades.
+        </p>
+    </section>
+
+    <section id="eventos" tabindex="-1" aria-label="Eventos">
+        <h2>Eventos</h2>
+        <p>
+            Fique atento aos nossos eventos anuais, reuniões, festas e workshops que celebram a cultura portuguesa e a nossa comunidade.
+        </p>
+    </section>
+
+    <section id="contactos" tabindex="-1" aria-label="Contactos">
+        <h2>Contactos</h2>
+        <p>
+            Para mais informações, contacte-nos por email em <a href="mailto:info@alepe.ch">info@alepe.ch</a> ou siga-nos nas redes sociais.
+        </p>
+    </section>
+</main>
+
+</body>
+</html>
