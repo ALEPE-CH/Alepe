@@ -20,66 +20,59 @@
         }
 
         /* --- HEADER --- */
-         header {
+        header {
     position: fixed; /* fixe en haut */
     width: 100%;
     top: 0;
     left: 0;
-    background: white;
+    background-color: #f9f9f9; /* blanc cassé */
     border-bottom: 2px solid #D52B1E;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.8rem 2rem;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* ombre légère */
     transition: top 0.3s ease; /* animation pour cacher/montrer */
-  }
+    color: #006442; /* texte vert doux */
+}
 
-        /* ALEPE logo/text */
-        .logo {
-            font-weight: 700;
-            font-size: 1.8rem;
-            color: #D52B1E;
-            user-select: none;
-            cursor: default;
-        }
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #006442; /* vert doux */
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
 
-        /* NAV menu */
-        nav {
-            flex-grow: 1;
-            text-align: center;
-        }
+nav a:hover {
+    color: #D52B1E; /* rouge vif au survol */
+}
 
-        nav a {
-            text-decoration: none;
-            margin: 0 15px;
-            color: #006442;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
+.logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #D52B1E; /* logo rouge vif */
+    user-select: none;
+    cursor: default;
+}
 
-        nav a:hover {
-            color: #D52B1E;
-        }
+.btn-membro {
+    background-color: #D52B1E; /* rouge vif */
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    user-select: none;
+}
 
-        /* Bouton "Tornar-se membro" */
-        .btn-membro {
-            background-color: #D52B1E;
-            color: white;
-            border: none;
-            padding: 0.5rem 1.2rem;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            user-select: none;
-        }
-
-        .btn-membro:hover {
-            background-color: #A01F16;
-        }
+.btn-membro:hover {
+    background-color: #A01F16; /* rouge foncé au survol */
+}
 
         /* --- SECTIONS ONE SCROLL --- */
         section {
