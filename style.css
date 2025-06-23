@@ -74,7 +74,7 @@ header {
 }
 
 .btn-member {
-  background-color: var(--green);
+  background-color: var(--red);
   color: var(--white);
   border: none;
   padding: 10px 18px;
@@ -87,7 +87,7 @@ header {
 
 .btn-member:hover,
 .btn-member:focus {
-  background-color: var(--dark-green);
+  background-color: var(--a10a22);
   outline: none;
 }
 
