@@ -127,8 +127,9 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  scroll-margin-top: 70px; /* espace égal à la hauteur du header + un peu */
 }
-
+  
 .welcome {
   background: var(--green);
   color: var(--white);
