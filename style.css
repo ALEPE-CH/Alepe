@@ -14,9 +14,41 @@ body {
 
 /* COULEURS */
 :root {
-  --verde: #14532d;     /* vert plus doux */
+  --verde: #14532d;     /* vert doux */
   --vermelho: #a32020;  /* rouge bordeau clair */
   --amarelo: #ffdd57;   /* jaune doré */
+}
+
+/* BARRE DE CHARGEMENT */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  z-index: 2000;
+  overflow: hidden;
+}
+
+.barra.animada {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  background-color: var(--amarelo);
+  animation: loopBarra 1.5s linear infinite;
+}
+
+@keyframes loopBarra {
+  0% {
+    left: -30%;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 /* NAVIGATION */
@@ -89,7 +121,7 @@ body {
   background-color: #891a1a;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
   padding: 100px 20px;
   max-width: 900px;
@@ -114,6 +146,13 @@ body {
 
 .inicio p {
   font-size: 1.2rem;
+}
+
+.em-construcao {
+  margin-top: 1rem;
+  color: var(--amarelo);
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 /* FOOTER */
