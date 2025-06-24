@@ -23,18 +23,17 @@
     }
 
     header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: var(--verde);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem 3vw;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      z-index: 1000;
-    }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--verde);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5vw;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
 
     .logo {
       font-size: 1.5rem;
@@ -69,21 +68,6 @@
 
     nav a:hover::after {
       width: 100%;
-    }
-
-    .btn-membro {
-      background: var(--vermelho);
-      color: var(--branco);
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-right: 0;
-    }
-
-    .btn-membro:hover {
-      background: var(--amarelo);
-      color: var(--cinza-escuro);
     }
 
     section {
@@ -172,16 +156,15 @@
 </head>
 <body>
   <header>
-    <div class="logo">ALEPE</div>
-    <nav>
-      <a href="#inicio">Início</a>
-      <a href="#sobre">Sobre nós</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-    <a href="#membro" class="btn-membro">Tornar-se membro</a>
-  </header>
+  <div class="logo">ALEPE</div>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre nós</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
 
   <section id="inicio" class="hero">
     <h1>Bem-vindo à ALEPE</h1>
