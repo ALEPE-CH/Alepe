@@ -12,12 +12,19 @@ body {
   color: #333;
 }
 
+/* COULEURS */
+:root {
+  --verde: #004225;     /* vert forêt */
+  --vermelho: #8B0000;  /* bordeau */
+  --amarelo: #FFD700;   /* doré */
+}
+
 /* NAVIGATION */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #006600; /* vert foncé Portugal */
+  background-color: var(--verde);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -35,22 +42,40 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;
+  flex: 1;
+  gap: 2rem;
+}
+
+.nav-links li {
+  position: relative;
 }
 
 .nav-links a {
   text-decoration: none;
   color: white;
   font-weight: 500;
-  transition: color 0.3s;
+  padding: 0.25rem;
+  transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #ffcc00; /* jaune Portugal */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--amarelo);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .btn-membro {
-  background-color: #ff0000; /* rouge Portugal */
+  background-color: var(--vermelho);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -60,7 +85,7 @@ body {
 }
 
 .btn-membro:hover {
-  background-color: #cc0000;
+  background-color: #660000;
 }
 
 /* SECTIONS */
@@ -82,7 +107,7 @@ body {
 
 .inicio h1 {
   font-size: 3rem;
-  color: #006600;
+  color: var(--verde);
   margin-bottom: 1rem;
 }
 
@@ -92,7 +117,7 @@ body {
 
 /* FOOTER */
 footer {
-  background-color: #006600;
+  background-color: var(--verde);
   color: white;
   text-align: center;
   padding: 1rem;
@@ -113,6 +138,4 @@ footer {
   .btn-membro {
     margin-top: 10px;
   }
-
-  /* Tu pourras ajouter un menu burger ici plus tard si tu veux */
 }
