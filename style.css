@@ -1,4 +1,3 @@
-/* Palette: vermelho 🇵🇹, verde 🇵🇹, dourado + fond gris clair */
 :root {
   --vermelho: #C8102E;
   --verde: #006847;
@@ -22,9 +21,9 @@ header {
   width: 100%;
   background: var(--verde);
   display: flex;
-  gap: 1rem;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 1000;
