@@ -16,19 +16,17 @@ body {
 :root {
   --verde: #14532d;     /* vert doux */
   --vermelho: #a32020;  /* rouge bordeau clair */
-  --amarelo: #ffdd57;   /* jaune doré */
+  --amarelo: #c49a2a;   /* jaune doré foncé */
 }
 
-/* BARRE DE CHARGEMENT */
+/* BARRE DE CHARGEMENT sous le message */
 #preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 4px;
+  height: 6px;
   background-color: transparent;
-  z-index: 2000;
+  margin-top: 0.5rem;
   overflow: hidden;
+  position: relative;
 }
 
 .barra.animada {
@@ -188,4 +186,3 @@ footer {
     margin-top: 0.5rem;
   }
 }
-
