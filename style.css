@@ -8,10 +8,13 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth; /* défilement doux vers les sections */
+}
+
 body {
   background: #f2f2f2;
   color: #1a1a1a;
-  scroll-behavior: smooth; /* défilement fluide */
 }
 
 /* ===== HEADER ===== */
@@ -25,28 +28,25 @@ body {
   z-index: 999;
 }
 
-/* MENU CONTAINER: centrage réel du menu */
+/* On utilise un layout en grille pour centrer le menu */
 .menu-container {
-  max-width: 1200px;
+  width: 90%;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* logo | menu centré | bouton */
   align-items: center;
 }
 
-/* LOGO */
 .logo-left {
   color: white;
   font-size: 24px;
   font-weight: bold;
 }
 
-/* MENU CENTRÉ */
 .menu-center {
   display: flex;
-  gap: 25px;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center; /* centre les liens dans la zone centrale */
+  gap: 20px;
 }
 
 .menu-center a {
@@ -73,9 +73,12 @@ body {
   width: 100%;
 }
 
-/* BOUTON MEMBRE */
+.menu-right {
+  text-align: right;
+}
+
 .btn-member {
-  background: #7A1E2C;
+  background: #7A1E2C; /* Bordeaux */
   color: white;
   padding: 8px 15px;
   border-radius: 6px;
@@ -95,13 +98,14 @@ body {
   background: url('hero-bg.png');
   background-size: cover;
   background-position: center;
-  
+  background-repeat: no-repeat;
+
   display: flex;
   justify-content: center;
-  align-items: center; /* centre verticalement */
+  align-items: center;
   text-align: center;
 
-  padding-top: 40px; /* remonte le texte */
+  padding-top: 40px; /* ajuste la position du texte */
   position: relative;
 }
 
@@ -115,9 +119,14 @@ body {
   background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #ffffff 100%);
 }
 
+.hero-content {
+  position: relative;
+  z-index: 1; /* passe devant le dégradé */
+}
+
 #hero h1 {
   font-size: 60px;
-  color: #0C2148;
+  color: #0C2148; /* Bleu profond */
   font-weight: bold;
 }
 
@@ -128,18 +137,19 @@ body {
 }
 
 /* ===== COLONNE BLANCHE ===== */
-/* Espacement uniforme : même distance au-dessus et en-dessous */
 #main-column {
   width: 80%;
-  margin: 100px auto; /* Espace égal avant et après */
+  margin: 60px auto 60px; /* espace égal au-dessus et au-dessous */
   background: white;
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
+/* chaque section scrolle en dessous du header fixe */
 .section-block {
   margin-bottom: 60px;
+  scroll-margin-top: 120px; /* évite que le titre soit caché par le header */
 }
 
 .section-block h2 {
@@ -148,7 +158,7 @@ body {
   color: #0C2148;
 }
 
-/* BOUTON JUNTE-SE A NÓS FIXÉ */
+/* Ajustement du bouton dans la section Junte-se a nós */
 #junte .btn-member {
   margin-top: 20px;
 }
