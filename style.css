@@ -39,7 +39,7 @@ body {
   height: 40px;
 }
 
-/* MENU CENTRÉ ABSOLUMENT (méthode parfaite) */
+/* MENU CENTRÉ PARFAITEMENT */
 .menu-center {
   position: absolute;
   left: 50%;
@@ -57,6 +57,7 @@ body {
   transition: 0.3s;
 }
 
+/* Barre bordeaux au survol */
 .menu-center a::after {
   content: "";
   width: 0;
@@ -116,6 +117,7 @@ body {
   position: relative;
 }
 
+/* Dégradé vers la colonne blanche */
 #hero::after {
   content: "";
   position: absolute;
@@ -158,7 +160,23 @@ body {
   color: #0C2148;
 }
 
-/* Bouton section Junte-se a nós */
+.section-block p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* LISTE DANS "SERVIÇOS" — ALIGNÉE AVEC LE TEXTE */
+#servicos ul {
+  margin-left: 20px;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+#servicos ul li {
+  margin-bottom: 8px;
+}
+
+/* BOUTON DE LA SECTION JUNTE-SE A NÓS */
 #junte .btn-member {
   margin-top: 20px;
 }
@@ -170,4 +188,5 @@ body {
   text-align: center;
   color: white;
   border-radius: 10px 10px 0 0;
+  margin-top: 40px;
 }
