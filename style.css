@@ -178,7 +178,8 @@ body {
 
 /* BOUTON DE LA SECTION JUNTE-SE A NÓS */
 #junte .btn-member {
-  margin-top: 20px;
+  margin-top: 25px;   /* même espace que Serviços */
+  display: inline-block;
 }
 
 /* ===== FOOTER ===== */
