@@ -11,13 +11,13 @@
 body {
   background: #f2f2f2;
   color: #1a1a1a;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* défilement fluide */
 }
 
 /* ===== HEADER ===== */
 #header {
   width: 100%;
-  background: #0C2148;
+  background: #0C2148; /* Bleu profond */
   padding: 15px 0;
   position: fixed;
   top: 0;
@@ -25,24 +25,28 @@ body {
   z-index: 999;
 }
 
+/* MENU CONTAINER: centrage réel du menu */
 .menu-container {
-  width: 90%;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* LOGO */
 .logo-left {
   color: white;
   font-size: 24px;
   font-weight: bold;
 }
 
+/* MENU CENTRÉ */
 .menu-center {
   display: flex;
-  gap: 20px;
-  margin: 0 auto; /* center menu */
+  gap: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .menu-center a {
@@ -53,11 +57,12 @@ body {
   transition: 0.3s;
 }
 
+/* Barre bordeaux au survol */
 .menu-center a::after {
   content: "";
   width: 0%;
   height: 2px;
-  background: #7A1E2C;
+  background: #7A1E2C; /* Bordeaux */
   position: absolute;
   left: 0;
   bottom: -4px;
@@ -68,6 +73,7 @@ body {
   width: 100%;
 }
 
+/* BOUTON MEMBRE */
 .btn-member {
   background: #7A1E2C;
   color: white;
@@ -89,11 +95,13 @@ body {
   background: url('hero-bg.png');
   background-size: cover;
   background-position: center;
+  
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* centre verticalement */
   text-align: center;
-  padding-top: 40px;
+
+  padding-top: 40px; /* remonte le texte */
   position: relative;
 }
 
@@ -110,6 +118,7 @@ body {
 #hero h1 {
   font-size: 60px;
   color: #0C2148;
+  font-weight: bold;
 }
 
 #hero p {
@@ -119,9 +128,10 @@ body {
 }
 
 /* ===== COLONNE BLANCHE ===== */
+/* Espacement uniforme : même distance au-dessus et en-dessous */
 #main-column {
   width: 80%;
-  margin: 120px auto; /* equal spacing above hero and footer */
+  margin: 100px auto; /* Espace égal avant et après */
   background: white;
   padding: 40px;
   border-radius: 10px;
@@ -138,7 +148,7 @@ body {
   color: #0C2148;
 }
 
-/* Ajustement bouton Junte-se a nós */
+/* BOUTON JUNTE-SE A NÓS FIXÉ */
 #junte .btn-member {
   margin-top: 20px;
 }
