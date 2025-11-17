@@ -11,6 +11,7 @@
 body {
   background: #f2f2f2;
   color: #1a1a1a;
+  scroll-behavior: smooth; /* défilement fluide */
 }
 
 /* ===== HEADER ===== */
@@ -70,6 +71,7 @@ body {
   border-radius: 6px;
   text-decoration: none;
   transition: 0.3s;
+  display: inline-block;
 }
 
 .btn-member:hover {
@@ -84,13 +86,13 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* centre le texte verticalement */
   text-align: center;
-  padding-top: 80px; /* pour compenser le menu fixe */
 
-  /* Dégradé vers blanc */
+  padding-top: 40px; /* au lieu de 80 — remonte le texte */
   position: relative;
 }
 
@@ -122,7 +124,8 @@ body {
   margin: auto;
   background: white;
   padding: 40px;
-  margin-top: -40px; /* remonte contre le dégradé */
+
+  margin-top: 80px; /* pleinement séparé du hero */
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
