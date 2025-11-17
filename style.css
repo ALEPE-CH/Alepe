@@ -93,6 +93,8 @@ body {
   border-radius: 6px;
   text-decoration: none;
   display: inline-block;
+  margin-top: 25px;      /* Uniformisation */
+  margin-bottom: 10px;   /* Uniformisation */
   transition: 0.3s;
 }
 
@@ -174,12 +176,6 @@ body {
 
 #servicos ul li {
   margin-bottom: 8px;
-}
-
-/* BOUTON DE LA SECTION JUNTE-SE A NÓS */
-#junte .btn-member {
-  margin-top: 25px;   /* même espace que Serviços */
-  display: inline-block;
 }
 
 /* ===== FOOTER ===== */
