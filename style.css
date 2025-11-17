@@ -86,6 +86,7 @@ body {
   z-index: 2;
 }
 
+/* UNIFORMISATION DE TOUS LES BOUTONS */
 .btn-member {
   background: #7A1E2C;
   color: white;
@@ -93,13 +94,19 @@ body {
   border-radius: 6px;
   text-decoration: none;
   display: inline-block;
-  margin-top: 25px;      /* Uniformisation */
-  margin-bottom: 10px;   /* Uniformisation */
+  margin-top: 20px;      
+  margin-bottom: 10px;   
   transition: 0.3s;
 }
 
 .btn-member:hover {
   opacity: 0.8;
+}
+
+/* CORRECTION POUR LE BOUTON DU HEADER */
+.menu-right .btn-member {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* ===== HERO ===== */
