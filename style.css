@@ -1,1 +1,148 @@
+/* STYLE DE BASE POUR LE SITE ALEPE */
 
+/* Reset simple */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+  color: #1a1a1a;
+}
+
+/* ===== HEADER ===== */
+#header {
+  width: 100%;
+  background: #0C2148; /* Bleu profond */
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.menu-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-left {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-center a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  position: relative;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* Barre bordeaux au survol */
+.menu-center a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #7A1E2C; /* Bordeaux */
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+.menu-center a:hover::after {
+  width: 100%;
+}
+
+.btn-member {
+  background: #7A1E2C;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-member:hover {
+  opacity: 0.8;
+}
+
+/* ===== HERO ===== */
+#hero {
+  width: 100%;
+  height: 70vh;
+  background: url('hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px; /* pour compenser le menu fixe */
+
+  /* Dégradé vers blanc */
+  position: relative;
+}
+
+#hero::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #ffffff 100%);
+}
+
+#hero h1 {
+  font-size: 60px;
+  color: #0C2148; /* Bleu profond */
+  font-weight: bold;
+}
+
+#hero p {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #0C2148;
+}
+
+/* ===== COLONNE BLANCHE ===== */
+#main-column {
+  width: 80%;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  margin-top: -40px; /* remonte contre le dégradé */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.section-block {
+  margin-bottom: 60px;
+}
+
+.section-block h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #0C2148;
+}
+
+/* ===== FOOTER ===== */
+#footer {
+  background: #0C2148;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+  border-radius: 10px 10px 0 0;
+}
