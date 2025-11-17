@@ -9,7 +9,7 @@
 }
 
 html {
-  scroll-behavior: smooth; /* défilement doux vers les sections */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,7 +20,7 @@ body {
 /* ===== HEADER ===== */
 #header {
   width: 100%;
-  background: #0C2148; /* Bleu profond */
+  background: #0C2148;
   padding: 15px 0;
   position: fixed;
   top: 0;
@@ -28,44 +28,43 @@ body {
   z-index: 999;
 }
 
-/* On utilise un layout en grille pour centrer le menu */
+/* CONTAINER DE LA BARRE */
 .menu-container {
   width: 90%;
   margin: auto;
-  display: grid;
-  grid-template-columns: auto 1fr auto; /* logo | menu centré | bouton */
-  align-items: center;
-}
-
-.logo-left {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.menu-center {
+  position: relative;
   display: flex;
-  justify-content: center; /* centre les liens dans la zone centrale */
-  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+}
+
+/* MENU CENTRÉ ABSOLUMENT (méthode parfaite) */
+.menu-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+  z-index: 1;
 }
 
 .menu-center a {
   color: white;
   text-decoration: none;
-  position: relative;
   font-size: 16px;
+  position: relative;
   transition: 0.3s;
 }
 
-/* Barre bordeaux au survol */
 .menu-center a::after {
   content: "";
-  width: 0%;
+  width: 0;
   height: 2px;
-  background: #7A1E2C; /* Bordeaux */
+  background: #7A1E2C;
   position: absolute;
-  left: 0;
   bottom: -4px;
+  left: 0;
   transition: 0.3s;
 }
 
@@ -73,18 +72,27 @@ body {
   width: 100%;
 }
 
+/* LOGO GAUCHE */
+.logo-left {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* BOUTON À DROITE */
 .menu-right {
-  text-align: right;
+  z-index: 2;
 }
 
 .btn-member {
-  background: #7A1E2C; /* Bordeaux */
+  background: #7A1E2C;
   color: white;
   padding: 8px 15px;
   border-radius: 6px;
   text-decoration: none;
-  transition: 0.3s;
   display: inline-block;
+  transition: 0.3s;
 }
 
 .btn-member:hover {
@@ -98,14 +106,13 @@ body {
   background: url('hero-bg.png');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 
-  padding-top: 40px; /* ajuste la position du texte */
+  padding-top: 40px;
   position: relative;
 }
 
@@ -113,20 +120,14 @@ body {
   content: "";
   position: absolute;
   bottom: -1px;
-  left: 0;
   width: 100%;
   height: 120px;
   background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #ffffff 100%);
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1; /* passe devant le dégradé */
-}
-
 #hero h1 {
   font-size: 60px;
-  color: #0C2148; /* Bleu profond */
+  color: #0C2148;
   font-weight: bold;
 }
 
@@ -139,17 +140,16 @@ body {
 /* ===== COLONNE BLANCHE ===== */
 #main-column {
   width: 80%;
-  margin: 60px auto 60px; /* espace égal au-dessus et au-dessous */
+  margin: 60px auto;
   background: white;
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* chaque section scrolle en dessous du header fixe */
 .section-block {
   margin-bottom: 60px;
-  scroll-margin-top: 120px; /* évite que le titre soit caché par le header */
+  scroll-margin-top: 120px;
 }
 
 .section-block h2 {
@@ -158,7 +158,7 @@ body {
   color: #0C2148;
 }
 
-/* Ajustement du bouton dans la section Junte-se a nós */
+/* Bouton section Junte-se a nós */
 #junte .btn-member {
   margin-top: 20px;
 }
