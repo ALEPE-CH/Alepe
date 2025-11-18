@@ -225,3 +225,98 @@ body {
     padding: 30px;
   }
 }
+
+/* ============================= */
+/* MENU MOBILE - SLIDE IN        */
+/* ============================= */
+
+#hamburger {
+  display: none;
+  font-size: 30px;
+  color: white;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+/* Menu mobile caché par défaut */
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100vh;
+  background: #0C2148;
+  padding-top: 80px;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+  transition: 0.4s ease-in-out;
+  z-index: 1000;
+}
+
+#mobile-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#mobile-menu nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+#mobile-menu nav a:hover {
+  opacity: 0.8;
+}
+
+/* Animation ouverture */
+#mobile-menu.open {
+  right: 0;
+}
+
+/* Le bouton "membre" dans le menu mobile */
+#mobile-menu .btn-member {
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+/* ================================== */
+/* RESPONSIVE - VERSION MOBILE        */
+/* ================================== */
+
+@media (max-width: 768px) {
+
+  /* On cache le menu horizontal */
+  .menu-center {
+    display: none;
+  }
+
+  /* On cache aussi le bouton du header */
+  .menu-right {
+    display: none;
+  }
+
+  /* On affiche l'icône hamburger */
+  #hamburger {
+    display: block;
+  }
+
+  /* Colonne blanche plus large */
+  #main-column {
+    width: 90%;
+    padding: 25px;
+  }
+
+  /* Réduction du hero */
+  #hero h1 {
+    font-size: 42px;
+  }
+
+  #hero p {
+    font-size: 18px;
+  }
+}
+
