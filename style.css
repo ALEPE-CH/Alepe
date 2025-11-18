@@ -194,3 +194,34 @@ body {
   border-radius: 10px 10px 0 0;
   margin-top: 40px;
 }
+
+/* ============================= */
+/* RESPONSIVE - TABLETTE/LAPTOP */
+/* ============================= */
+
+@media (max-width: 992px) {
+
+  /* Réduction du menu */
+  .menu-center {
+    gap: 15px;
+  }
+
+  .menu-center a {
+    font-size: 14px;
+  }
+
+  /* Réduction du hero */
+  #hero h1 {
+    font-size: 48px;
+  }
+
+  #hero p {
+    font-size: 18px;
+  }
+
+  /* Colonne blanche plus étroite */
+  #main-column {
+    width: 90%;
+    padding: 30px;
+  }
+}
