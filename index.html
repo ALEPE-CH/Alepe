@@ -158,5 +158,21 @@
         <p>&copy; ALEPE - Associação de Antigos Alunos da Escola Portuguesa na Suíça</p>
     </footer>
 
+    <script>
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  hamburger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+  });
+
+  // Ferme le menu quand on clique sur un lien
+  document.querySelectorAll("#mobile-menu a").forEach(link => {
+      link.addEventListener("click", () => {
+          mobileMenu.classList.remove("open");
+      });
+  });
+</script>
+
 </body>
 </html>
