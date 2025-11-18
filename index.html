@@ -156,7 +156,7 @@
 
     <!-- FOOTER -->
     <footer id="footer">
-        <p>&copy; ALEPE - Associação de Antigos Alunos da Escola Portuguesa na Suíça</p>
+    <p>&copy; <span id="year"></span> ALEPE - Associação de Antigos Alunos da Escola Portuguesa na Suíça</p>
     </footer>
 
     <script>
@@ -173,7 +173,11 @@
           mobileMenu.classList.remove("open");
       });
   });
-</script>
+    </script>
+
+    <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
 </body>
 </html>
