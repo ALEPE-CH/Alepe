@@ -32,24 +32,24 @@
     </header>
 
     <!-- MENU MOBILE (slide-in) -->
-<div id="mobile-menu">
-    <nav>
-        <a href="#sobre">Sobre nós</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#agenda">Agenda</a>
-        <a href="#galeria">Galeria</a>
-        <a href="#junte">Junte-se a nós</a>
-        <a href="#contacto">Contacto</a>
-        <a class="btn-member" href="https://forms.gle/dT4xDe4ppFm6Numq8" target="_blank">
-            Tornar-se membro
-        </a>
-    </nav>
-</div>
+    <div id="mobile-menu">
+        <nav>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#agenda">Agenda</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#junte">Junte-se a nós</a>
+            <a href="#contacto">Contacto</a>
+            <a class="btn-member" href="https://forms.gle/dT4xDe4ppFm6Numq8" target="_blank">
+                Tornar-se membro
+            </a>
+        </nav>
+    </div>
 
-<!-- Icône hamburger -->
-<div id="hamburger">
-    &#9776;
-</div>
+    <!-- Icône hamburger -->
+    <div id="hamburger">
+        &#9776;
+    </div>
 
     <!-- HERO -->
     <section id="hero">
@@ -122,8 +122,18 @@
             <p>
                 Em breve poderá encontrar aqui fotografias de eventos, encontros e momentos importantes da comunidade ALEPE.
                 <br><br>
-                Fique atento às próximas atualizações !
+                À medida que formos adicionando fotos, poderá clicar nas imagens para as ver em maior.
             </p>
+
+            <!-- Grille d’images (pour l’instant vide) -->
+            <div class="gallery-grid">
+                <!-- EXEMPLOS (à décommenter quand tu auras des images dans /galeria) -->
+                <!--
+                <img src="galeria/foto1.jpg" alt="Evento ALEPE 1">
+                <img src="galeria/foto2.jpg" alt="Evento ALEPE 2">
+                <img src="galeria/foto3.jpg" alt="Evento ALEPE 3">
+                -->
+            </div>
         </section>
 
         <!-- JUNTE-SE A NÓS -->
@@ -154,29 +164,64 @@
 
     </main>
 
+    <!-- LIGHTBOX (overlay pour les images de la galerie) -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" src="" alt="">
+    </div>
+
     <!-- FOOTER -->
     <footer id="footer">
-    <p>&copy; <span id="year"></span> ALEPE - Associação de Antigos Alunos da Escola Portuguesa na Suíça</p>
+        <p>&copy; <span id="year"></span> ALEPE - Associação de Antigos Alunos da Escola Portuguesa na Suíça</p>
     </footer>
 
+    <!-- SCRIPT MENU MOBILE -->
     <script>
-  const hamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobile-menu");
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-  hamburger.addEventListener("click", () => {
-      mobileMenu.classList.toggle("open");
-  });
-
-  // Ferme le menu quand on clique sur un lien
-  document.querySelectorAll("#mobile-menu a").forEach(link => {
-      link.addEventListener("click", () => {
-          mobileMenu.classList.remove("open");
+      hamburger.addEventListener("click", () => {
+          mobileMenu.classList.toggle("open");
       });
-  });
+
+      // Ferme le menu quand on clique sur un lien
+      document.querySelectorAll("#mobile-menu a").forEach(link => {
+          link.addEventListener("click", () => {
+              mobileMenu.classList.remove("open");
+          });
+      });
     </script>
 
+    <!-- SCRIPT ANNÉE AUTOMATIQUE -->
     <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- SCRIPT LIGHTBOX GALERIE -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const images = document.querySelectorAll(".gallery-grid img");
+          const lightbox = document.getElementById("lightbox");
+          const lightboxImg = document.querySelector(".lightbox-img");
+          const lightboxClose = document.querySelector(".lightbox-close");
+
+          images.forEach(img => {
+              img.addEventListener("click", () => {
+                  lightboxImg.src = img.src;
+                  lightbox.classList.add("open");
+              });
+          });
+
+          lightboxClose.addEventListener("click", () => {
+              lightbox.classList.remove("open");
+          });
+
+          lightbox.addEventListener("click", (e) => {
+              if (e.target === lightbox) {
+                  lightbox.classList.remove("open");
+              }
+          });
+      });
     </script>
 
 </body>
